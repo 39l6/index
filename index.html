@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <script>
  function test(){
-  let A = `TESTPANG${Date.now()}`;
+  let A = `TESTPANG${Date.toUTCString()}`;
   document.title = A;
   return console.log(A);
  }
