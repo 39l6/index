@@ -15,8 +15,10 @@ function favico() {
     if (day.length == 1) day = '0' + day;
     ctx.fillText(day, 5, 15);
        
+    link.rel = 'icon';
+    link.type='image/x-icon';
+    link.href = canvas.toDataURL();
     
-    link.href = canvas.toDataURL();   
     return document.head.appendChild(link);
 }
 
