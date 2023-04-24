@@ -14,10 +14,10 @@ function favico() {
         ctx.fillStyle = '#F0EEDD';
         if (day.length == 1) day = '0' + day;
         ctx.fillText(day, 2, 12);
-        link.href = canvas.toDataURL('image/png');
+        link.href = canvas.toDataURL('image/webp');
         document.body.appendChild(link);
       };
-      img.src = 'image.png';
+      img.src = 'image.webp';
     }
     
     }
