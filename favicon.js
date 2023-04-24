@@ -1,6 +1,6 @@
-let color = ['#F0EEDD','cian','pink'];
+let color = ['#F0EEDD','blue','pink'];
 
-function favico() {
+function faviconD() {
     let canvas = document.createElement('canvas');
         canvas.height = canvas.width = 16;
     let ctx = canvas.getContext('2d');
@@ -37,5 +37,6 @@ function fondo(c){
     }
 
 }   
+//sigue dando error en favicon github, pero si pinta
   
     //https://stackoverflow.com/questions/6296574/dynamic-favicon-using-image-manipulation-similar-to-gmail-adding-a-count
