@@ -1,33 +1,37 @@
-function favico() {
-    let canvas = document.createElement('canvas'),
-        ctx,
-        link = document.createElement('link'),
-        day = (new Date).getDate() + '';// en vez de toString
-       canvas.height = canvas.width = 16;
-       ctx = canvas.getContext('2d');
+let color = ['#F0EEDD','cian','pink'];
 
-       ctx.font = 'bold 10px "helvetica", sans-serif';
-       ctx.fillStyle = '#F0EEDD';
-       if (day.length == 1) day = '0' + day;
-       ctx.fillText(day, 2, 12);
-       link.href = canvas.toDataURL();
+function favico() {
+    let canvas = document.createElement('canvas');
+        canvas.height = canvas.width = 16;
+    let ctx = canvas.getContext('2d');
+    
+    let link = document.createElement('link');
+    
+    let day = (new Date).getDate() + '';// en vez de toString
+    
+    fondo();
+    ctx.font = 'bold 10px "helvetica", sans-serif';
+    ctx.fillStyle = color[0];
+    if (day.length == 1) day = '0' + day;
+    ctx.fillText(day, 5, 15);
        
-     return document.head.appendChild(link);
+    
+    link.href = canvas.toDataURL();   
+    return document.head.appendChild(link);
 }
 
-/*
-for(i = 0; i<color.length ; i++){
-    ctx.beginPath();
-    ctx.rect(0, 0, 8, 8);
-    ctx.fillStyle = "red";
-    ctx.fill();
 
-    ctx.beginPath();
-    ctx.rect(8, 8, 8, 8);
-    ctx.fillStyle = color[i];
-    ctx.fill(); 
-
+function fondo(){
+    var x,y = 0;
+    var sx, sy = 5;
+    for(i = 0; i<color.length ; i++){
+        ctx.beginPath();
+        ctx.rect(x, y, sx, sy);
+        ctx.fillStyle = color[i];
+        ctx.fill();
+        x,y = x + sx;
+    }
 
 }   
-  */  
+  
     //https://stackoverflow.com/questions/6296574/dynamic-favicon-using-image-manipulation-similar-to-gmail-adding-a-count
