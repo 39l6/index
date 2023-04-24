@@ -9,7 +9,7 @@ function favico() {
     
     let day = (new Date).getDate() + '';// en vez de toString
     
-    fondo();
+    fondo(ctx);
     ctx.font = 'bold 10px "helvetica", sans-serif';
     ctx.fillStyle = color[0];
     if (day.length == 1) day = '0' + day;
@@ -23,14 +23,14 @@ function favico() {
 }
 
 
-function fondo(){
+function fondo(c){
     var x,y = 0;
     var sx, sy = 5;
     for(i = 0; i<color.length ; i++){
-        ctx.beginPath();
-        ctx.rect(x, y, sx, sy);
-        ctx.fillStyle = color[i];
-        ctx.fill();
+        c.beginPath();
+        c.rect(x, y, sx, sy);
+        c.fillStyle = color[i];
+        c.fill();
         x,y = x + sx;
     }
 
