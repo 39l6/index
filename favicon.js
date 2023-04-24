@@ -28,7 +28,7 @@ function fondo(c){
     var y = 0;
     var sx = 5; 
     var sy = 5;
-    for(i = 0; i<color.length ; i++){
+    for(var i = 0; i<color.length ; i++){
         c.beginPath();
         c.rect(x, y, sx, sy);
         c.fillStyle = color[i];
