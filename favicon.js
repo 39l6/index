@@ -10,9 +10,9 @@ function favico() {
        ctx.fillStyle = '#F0EEDD';
        if (day.length == 1) day = '0' + day;
        ctx.fillText(day, 2, 12);
-       link.href = canvas.toDataURL('image/webp');
+       link.href = canvas.toDataURL();
        
-     return document.body.appendChild(link);
+     return document.head.appendChild(link);
 }
 
 /*
