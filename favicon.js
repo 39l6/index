@@ -36,7 +36,8 @@ function fondo(c){
         x,y = x + sx;
     }
 
-}   
+} 
+faviconD();
 //sigue dando error en favicon github, pero si pinta
   
     //https://stackoverflow.com/questions/6296574/dynamic-favicon-using-image-manipulation-similar-to-gmail-adding-a-count
