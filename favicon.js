@@ -24,8 +24,10 @@ function favico() {
 
 
 function fondo(c){
-    var x,y = 0;
-    var sx, sy = 5;
+    var x = 0;
+    var y = 0;
+    var sx = 5; 
+    var sy = 5;
     for(i = 0; i<color.length ; i++){
         c.beginPath();
         c.rect(x, y, sx, sy);
