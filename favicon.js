@@ -13,7 +13,6 @@ function favico() {
        link.href = canvas.toDataURL('image/webp');
        
      return document.body.appendChild(link);
-    }
 }
 
 /*
