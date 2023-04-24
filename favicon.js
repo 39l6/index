@@ -1,9 +1,9 @@
 function favico() {
-    var canvas = document.createElement('canvas'),
+    let canvas = document.createElement('canvas'),
         ctx,
         link = document.createElement('link'),
-        day = (new Date).getDate() + '',// en vez de toString
-       canvas.height = canvas.width = 16,
+        day = (new Date).getDate() + '';// en vez de toString
+       canvas.height = canvas.width = 16;
        ctx = canvas.getContext('2d');
 
        ctx.font = 'bold 10px "helvetica", sans-serif';
